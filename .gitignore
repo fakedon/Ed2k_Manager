@@ -1,0 +1,21 @@
+# 忽略.vscode文件夹
+.vscode/
+.VSCodeCounter
+
+app/config
+
+# 忽略工作区文件
+*.code-workspace
+
+# 忽略python缓存文件
+*/__pycache__
+*.py[cod]
+
+
+
+app/
+my_fluent_widget/
+data/
+log/
+export/
+ed2k/
