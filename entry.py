@@ -5,7 +5,6 @@ import sys
 from PyQt5.QtCore import Qt, QTranslator
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtGui import QFont
-from qfluentwidgets import FluentTranslator
 
 from app.common.config import cfg
 from app.view.main_window import MainWindow
@@ -33,14 +32,15 @@ font = app.font()
 font.setHintingPreference(QFont.HintingPreference.PreferNoHinting)
 app.setFont(font)
 
-# internationalization
-locale = cfg.get(cfg.language).value
-translator = FluentTranslator(locale)
-galleryTranslator = QTranslator()
-galleryTranslator.load(locale, "gallery", ".", ":/gallery/i18n")
+#//DONE 国际化
 
-app.installTranslator(translator)
-app.installTranslator(galleryTranslator)
+locale = cfg.get(cfg.language).value
+
+Translator = QTranslator()
+
+Translator.load(locale, 'language', '.', ':/i18n/language')
+
+app.installTranslator(Translator)
 
 # create main window
 w = MainWindow()
