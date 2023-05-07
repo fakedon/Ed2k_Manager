@@ -23,6 +23,7 @@ from ..common.config import cfg, HELP_URL, FEEDBACK_URL, AUTHOR, VERSION, YEAR, 
 from ..common.my_icons import MyIcon
 from ..common.style_sheet import StyleSheet
 
+from  app.resource import  resouce_rc
 
 class SettingInterface(ScrollArea):
     """ Setting interface """
