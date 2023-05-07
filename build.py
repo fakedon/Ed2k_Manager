@@ -1,7 +1,4 @@
 import os
-import shutil
-
-from app.common.config import AUTHOR, VERSION
 
 app_name = 'Ed2k_Manager'
 build_command = "nuitka --standalone --mingw64 --enable-plugin=pyqt5 --show-memory --show-progress "
@@ -12,4 +9,4 @@ build_command += "entry.py"
 # ========
 
 print(build_command)
-os.system(build_command)  
+os.system(build_command)

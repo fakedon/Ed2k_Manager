@@ -3,15 +3,16 @@ import os
 import sys
 
 from PyQt5.QtCore import Qt, QTranslator
-from PyQt5.QtWidgets import QApplication
 from PyQt5.QtGui import QFont
+from PyQt5.QtWidgets import QApplication
 
 from app.common.config import cfg
 from app.view.main_window import MainWindow
 
+# done: 相对路径改绝对路径！！
 
 for i in ['ed2k', 'data', 'log']:
-    os.makedirs(i, exist_ok=True)
+    os.makedirs( os.path.join(os.path.dirname(sys.argv[0]), i), exist_ok=True)
 
 # enable dpi scale
 if cfg.get(cfg.dpiScale) == "Auto":
@@ -32,7 +33,7 @@ font = app.font()
 font.setHintingPreference(QFont.HintingPreference.PreferNoHinting)
 app.setFont(font)
 
-#//DONE 国际化
+# //DONE 国际化
 
 locale = cfg.get(cfg.language).value
 
