@@ -18,6 +18,8 @@ from ..common.signal_bus import signalBus
 from ..common.style_sheet import StyleSheet
 from ..components.avatar_widget import AvatarWidget
 
+from ..common import  resource
+
 
 class StackedWidget(QFrame):
     """ Stacked widget """
